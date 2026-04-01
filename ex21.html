@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 21</title>
+</head>
+<body>
+    <script>
+        // 1. Solicita o valor total da compra ao usuário
+let valorCompra = parseFloat(prompt("Digite o valor total da compra (R$):"));
+
+// 2. Define a quantidade de prestações
+const PRESTACOES = 5;
+
+// 3. Calcula o valor de cada prestação
+let valorPrestacao = valorCompra / PRESTACOES;
+
+// 4. Exibe os resultados na tela
+document.write("<h2>Loja Mamão com Açúcar - Parcelamento</h2>");
+document.write("<hr>");
+
+document.write("<p>Valor total da compra: <b>R$ " + valorCompra.toFixed(2).replace('.', ',') + "</b></p>");
+document.write("<p>Plano de pagamento: <b>" + PRESTACOES + "x sem juros</b></p>");
+
+document.write("<hr>");
+
+document.write("<p style='font-size: 1.2em;'>Valor de cada prestação: <span style='color: #e67e22;'><b>R$ " + valorPrestacao.toFixed(2).replace('.', ',') + "</b></span></p>");
+    </script>
+</body>
+</html>

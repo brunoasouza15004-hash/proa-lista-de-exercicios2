@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 16</title>
+</head>
+<body>
+    <script>
+        // 1. Inicializamos as variáveis de controle
+let somaIdades = 0;
+const totalPessoas = 20;
+
+// 2. Criamos o laço para ler as 20 idades
+for (let i = 1; i <= totalPessoas; i++) {
+    let idade = parseInt(prompt("Digite a idade da " + i + "ª pessoa:"));
+    
+    // Verificação de segurança para garantir que o valor é um número
+    if (!isNaN(idade) && idade >= 0) {
+        somaIdades += idade;
+    } else {
+        alert("Por favor, digite uma idade válida (número positivo).");
+        i--; // Decrementa para repetir a pergunta para a mesma pessoa
+    }
+}
+
+// 3. Cálculo da média aritmética
+let mediaIdades = somaIdades / totalPessoas;
+
+// 4. Exibição do resultado na tela
+document.write("<h2>Relatório de Média de Idades</h2>");
+document.write("<p>Total de pessoas consultadas: <b>" + totalPessoas + "</b></p>");
+document.write("<p>Soma total das idades: <b>" + somaIdades + " anos</b></p>");
+
+document.write("<hr>");
+
+document.write("<p style='font-size: 1.3em;'>A média das idades informadas é: <span style='color: darkgreen;'><b>" + mediaIdades.toFixed(1) + " anos</b></span></p>");
+    </script>
+</body>
+</html>

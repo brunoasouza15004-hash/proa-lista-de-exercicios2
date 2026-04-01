@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+</head>
+<body>
+    <script>
+        // Tabelas de calorias organizadas por categorias
+const cardapio = {
+    pratos: {
+        1: { nome: "Vegetariano", cal: 180 },
+        2: { nome: "Peixe", cal: 230 },
+        3: { nome: "Frango", cal: 250 },
+        4: { nome: "Carne", cal: 350 }
+    },
+    sobremesas: {
+        1: { nome: "Abacaxi", cal: 75 },
+        2: { nome: "Sorvete Diet", cal: 110 },
+        3: { nome: "Mousse Diet", cal: 170 },
+        4: { nome: "Mousse Chocolate", cal: 200 }
+    },
+    bebidas: {
+        1: { nome: "Chá", cal: 20 },
+        2: { nome: "Suco de Laranja", cal: 70 },
+        3: { nome: "Suco de Melão", cal: 100 },
+        4: { nome: "Refrigerante Diet", cal: 65 }
+    }
+};
+
+// Função para capturar a escolha do usuário
+function calcularRefeicao() {
+    const escolhaPrato = prompt("Escolha o Prato:\n1 - Vegetariano\n2 - Peixe\n3 - Frango\n4 - Carne");
+    const escolhaSobremesa = prompt("Escolha a Sobremesa:\n1 - Abacaxi\n2 - Sorvete Diet\n3 - Mousse Diet\n4 - Mousse Chocolate");
+    const escolhaBebida = prompt("Escolha a Bebida:\n1 - Chá\n2 - Suco de Laranja\n3 - Suco de Melão\n4 - Refrigerante Diet");
+
+    // Somando as calorias com base nas chaves do objeto
+    // O uso do operador '|| {cal: 0}' evita erros caso o usuário digite um número inválido
+    const totalCalorias = 
+        (cardapio.pratos[escolhaPrato]?.cal || 0) +
+        (cardapio.sobremesas[escolhaSobremesa]?.cal || 0) +
+        (cardapio.bebidas[escolhaBebida]?.cal || 0);
+
+    alert(`O total de calorias da sua refeição é: ${totalCalorias} cal`);
+}
+
+// Executa a função
+calcularRefeicao();
+    </script>
+</body>
+</html>

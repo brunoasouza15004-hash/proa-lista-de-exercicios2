@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 8</title>
+</head>
+<body>
+    <script>
+        // 1. Leitura da porcentagem do IPI
+let porcentagemIPI = parseFloat(prompt("Digite a porcentagem do IPI (ex: 10 para 10%):"));
+
+// 2. Leitura dos dados da Peça 1
+let codigo1 = prompt("Digite o código da Peça 1:");
+let valor1 = parseFloat(prompt("Digite o valor unitário da Peça 1:"));
+let quant1 = parseInt(prompt("Digite a quantidade de Peças 1:"));
+
+// 3. Leitura dos dados da Peça 2
+let codigo2 = prompt("Digite o código da Peça 2:");
+let valor2 = parseFloat(prompt("Digite o valor unitário da Peça 2:"));
+let quant2 = parseInt(prompt("Digite a quantidade de Peças 2:"));
+
+// 4. Cálculo do valor total conforme a fórmula:
+// (valor1*quant1 + valor2*quant2) * (IPI/100 + 1)
+let valorTotalBase = (valor1 * quant1) + (valor2 * quant2);
+let fatorIPI = (porcentagemIPI / 100) + 1;
+let valorFinal = valorTotalBase * fatorIPI;
+
+// 5. Exibição dos resultados
+document.write("<h2>Resumo da Compra com IPI</h2>");
+document.write("<hr>");
+
+document.write("<p><b>Item 1 (Código: " + codigo1 + "):</b> " + quant1 + " un. x R$ " + valor1.toFixed(2) + "</p>");
+document.write("<p><b>Item 2 (Código: " + codigo2 + "):</b> " + quant2 + " un. x R$ " + valor2.toFixed(2) + "</p>");
+
+document.write("<hr>");
+document.write("<p>Valor dos produtos (sem IPI): R$ <b>" + valorTotalBase.toFixed(2) + "</b></p>");
+document.write("<p>Porcentagem do IPI aplicada: <b>" + porcentagemIPI + "%</b></p>");
+document.write("<p>Valor Total a pagar (com IPI): <span style='color: green;'><b>R$ " + valorFinal.toFixed(2) + "</b></span></p>");
+    </script>
+</body>
+</html>

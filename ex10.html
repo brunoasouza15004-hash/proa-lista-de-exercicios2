@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 10</title>
+</head>
+<body>
+    <script>
+        // 1. Solicita o saldo atual ao usuário
+let saldoAtual = parseFloat(prompt("Digite o valor do seu saldo atual (R$):"));
+
+// 2. Calcula o reajuste de 1.5%
+// Cálculo: saldo + (saldo * 0.015) ou simplesmente saldo * 1.015
+let saldoReajustado = saldoAtual * 1.015;
+
+// 3. Exibe os resultados na tela
+document.write("<h2>Reajuste de Saldo (1.5%)</h2>");
+document.write("<p>Saldo original: <b>R$ " + saldoAtual.toFixed(2).replace('.', ',') + "</b></p>");
+
+document.write("<hr>");
+
+document.write("<p>Saldo com reajuste aplicado: <span style='color: blue;'><b>R$ " + saldoReajustado.toFixed(2).replace('.', ',') + "</b></span></p>");
+document.write("<p>O valor do rendimento foi de: <b>R$ " + (saldoReajustado - saldoAtual).toFixed(2).replace('.', ',') + "</b></p>");
+    </script>
+</body>
+</html>

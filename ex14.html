@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 14</title>
+</head>
+<body>
+    <script>
+        // 1. Inicializamos a variável acumuladora
+let somaTotal = 0;
+
+// 2. Criamos um laço que repetirá 10 vezes
+for (let i = 1; i <= 10; i++) {
+    // Pedimos o número ao usuário a cada volta do laço
+    let numeroInformado = parseFloat(prompt("Digite o " + i + "º número:"));
+    
+    // Verificamos se o valor digitado é um número válido antes de somar
+    if (!isNaN(numeroInformado)) {
+        somaTotal += numeroInformado;
+    } else {
+        alert("Valor inválido! Por favor, digite apenas números.");
+        i--; // Decrementamos o contador para repetir a mesma posição
+    }
+}
+
+// 3. Exibição do resultado final
+document.write("<h2>Soma de 10 Números</h2>");
+document.write("<hr>");
+document.write("<p>A soma total dos números informados é: <span style='font-size: 1.5em; color: green;'><b>" + somaTotal + "</b></span></p>");
+    </script>
+</body>
+</html>

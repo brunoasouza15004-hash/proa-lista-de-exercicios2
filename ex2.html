@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2</title>
+</head>
+<body>
+    <script>
+       // Solicita o número ao usuário
+let numero = parseInt(prompt("Digite um número inteiro:"));
+
+// Variável para verificar se houve alguma divisibilidade
+let divisivel = false;
+let mensagens = [];
+
+// Verificação por 10
+if (numero % 10 === 0) {
+    mensagens.push("10");
+    divisivel = true;
+}
+
+// Verificação por 5
+if (numero % 5 === 0) {
+    mensagens.push("5");
+    divisivel = true;
+}
+
+// Verificação por 2
+if (numero % 2 === 0) {
+    mensagens.push("2");
+    divisivel = true;
+}
+
+// Exibe o resultado final
+if (divisivel) {
+    document.write(`O número ${numero} é divisível por: ${mensagens.join(", ")}.`);
+} else {
+    document.write(`O número ${numero} não é divisível por 10, 5 ou 2.`);
+}
+    </script>
+</body>
+</html>

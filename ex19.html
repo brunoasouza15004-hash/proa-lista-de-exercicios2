@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 19</title>
+</head>
+<body>
+    <script>
+        // 1. Solicita a cotação do dólar hoje
+let cotacaoDolar = parseFloat(prompt("Digite o valor da cotação do dólar (R$):"));
+
+// 2. Solicita a quantidade de dólares que o usuário possui
+let quantidadeDolares = parseFloat(prompt("Digite a quantidade de dólares (US$) que você possui:"));
+
+// 3. Realiza o cálculo da conversão
+let valorEmReal = quantidadeDolares * cotacaoDolar;
+
+// 4. Exibição dos resultados no navegador
+document.write("<h2>Conversor de Moedas: Dólar para Real</h2>");
+document.write("<hr>");
+
+document.write("<p>Cotação informada: <b>R$ " + cotacaoDolar.toFixed(2).replace('.', ',') + "</b></p>");
+document.write("<p>Valor em Dólar: <b>US$ " + quantidadeDolares.toFixed(2).replace('.', ',') + "</b></p>");
+
+document.write("<hr>");
+
+document.write("<p style='font-size: 1.2em;'>O valor convertido para Real é: <span style='color: green;'><b>R$ " + valorEmReal.toFixed(2).replace('.', ',') + "</b></span></p>");
+    </script>
+</body>
+</html>

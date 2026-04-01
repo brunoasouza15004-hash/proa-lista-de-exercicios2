@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+</head>
+<body>
+    <script>
+        // Solicita o saldo médio ao usuário
+let saldoMedio = parseFloat(prompt("Digite o saldo médio do cliente:"));
+let valorCredito = 0;
+
+// Estrutura de decisão baseada na tabela de crédito
+if (saldoMedio <= 200) {
+    valorCredito = 0; // Nenhum crédito
+} else if (saldoMedio <= 400) {
+    valorCredito = saldoMedio * 0.20; // 20% do saldo médio
+} else if (saldoMedio <= 600) {
+    valorCredito = saldoMedio * 0.30; // 30% do saldo médio
+} else {
+    valorCredito = saldoMedio * 0.40; // 40% do saldo médio
+}
+
+// Exibe o resultado final formatado
+document.write("-------------------------------");
+document.write(`Saldo Médio: R$ ${saldoMedio.toFixed(2)}`);
+document.write(`Valor do Crédito: R$ ${valorCredito.toFixed(2)}`);
+document.write("-------------------------------");
+
+// Exemplo de alerta para o usuário
+alert(`Saldo Médio: R$ ${saldoMedio.toFixed(2)}\nValor do Crédito: R$ ${valorCredito.toFixed(2)}`);
+    </script>
+</body>
+</html>

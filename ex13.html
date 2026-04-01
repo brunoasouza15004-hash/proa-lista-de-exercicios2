@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 13</title>
+</head>
+<body>
+    <script>
+        // 1. Solicita a temperatura em Celsius ao usuário
+let celsius = parseFloat(prompt("Digite a temperatura em graus Celsius (°C):"));
+
+// 2. Aplica a fórmula de conversão: F = (9 * C + 160) / 5
+let fahrenheit = (9 * celsius + 160) / 5;
+
+// 3. Exibição dos resultados no navegador
+document.write("<h2>Conversor de Temperatura</h2>");
+document.write("<p>Temperatura lida: <b>" + celsius + "°C</b></p>");
+
+document.write("<hr>");
+
+document.write("<p>A temperatura convertida é: <span style='color: red;'><b>" + fahrenheit + "°F</b></span></p>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 25</title>
+</head>
+<body>
+    <script>
+        // 1. Inicializamos a variável que acumulará a soma
+let somaTotal = 0;
+let numeroInformado = 0;
+
+// 2. Explicação inicial para o usuário no navegador
+document.write("<h2>Soma de Sequência Numérica</h2>");
+document.write("<p>O programa somará todos os números positivos. Para encerrar, digite qualquer <b>número negativo</b>.</p>");
+document.write("<hr>");
+
+// 3. Estrutura de repetição 'while'
+while (true) {
+    // Solicita o número ao usuário
+    numeroInformado = parseFloat(prompt("Digite um número (negativo para sair):"));
+
+    // Verifica se o número é negativo para interromper o laço imediatamente
+    if (numeroInformado < 0) {
+        break; // Sai do loop sem somar o número negativo ao total
+    }
+
+    // Verifica se o que foi digitado é realmente um número (evita erros com letras)
+    if (!isNaN(numeroInformado)) {
+        somaTotal += numeroInformado;
+    } else {
+        alert("Por favor, digite um número válido.");
+    }
+}
+
+// 4. Exibição do resultado final após o encerramento do laço
+document.write("<p style='font-size: 1.3em;'>A soma total dos números digitados é: <span style='color: darkblue;'><b>" + somaTotal + "</b></span></p>");
+document.write("<p>Execução encerrada com sucesso.</p>");
+    </script>
+</body>
+</html>

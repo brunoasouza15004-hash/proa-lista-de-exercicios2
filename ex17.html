@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 17</title>
+</head>
+<body>
+    <script>
+        // 1. Inicializamos o contador de pessoas maiores de idade
+let maioresDeIdade = 0;
+const totalPessoas = 20;
+
+// 2. Criamos o laço para ler as 20 idades
+for (let i = 1; i <= totalPessoas; i++) {
+    let idade = parseInt(prompt("Digite a idade da " + i + "ª pessoa:"));
+    
+    // Verificamos se a entrada é um número válido
+    if (!isNaN(idade) && idade >= 0) {
+        // Se a idade for 18 ou mais, incrementamos o nosso contador
+        if (idade >= 18) {
+            maioresDeIdade++;
+        }
+    } else {
+        alert("Por favor, digite uma idade válida.");
+        i--; // Repete a pergunta para a mesma posição caso o valor seja inválido
+    }
+}
+
+// 3. Exibição do resultado final na tela
+document.write("<h2>Contagem de Maioridade</h2>");
+document.write("<p>Total de pessoas analisadas: <b>" + totalPessoas + "</b></p>");
+
+document.write("<hr>");
+
+document.write("<p style='font-size: 1.2em;'>Quantidade de pessoas <b>maiores de idade</b> (18+): <span style='color: darkred;'><b>" + maioresDeIdade + "</b></span></p>");
+document.write("<p style='font-size: 1.1em;'>Quantidade de pessoas <b>menores de idade</b>: <b>" + (totalPessoas - maioresDeIdade) + "</b></p>");
+    </script>
+</body>
+</html>

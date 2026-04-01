@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 15</title>
+</head>
+<body>
+    <script>
+        // 1. Inicializamos a variável que vai acumular a soma
+let somaIdades = 0;
+
+// 2. Criamos um laço que repetirá 20 vezes
+for (let i = 1; i <= 20; i++) {
+    // Pedimos a idade da pessoa atual
+    let idade = parseInt(prompt("Digite a idade da " + i + "ª pessoa:"));
+    
+    // Verificamos se o valor digitado é um número válido
+    if (!isNaN(idade)) {
+        somaTotal += idade;
+    } else {
+        alert("Por favor, digite um número válido para a idade.");
+        i--; // Diminuímos o contador para repetir a pergunta para a mesma pessoa
+    }
+}
+
+// 3. Exibição do resultado final na tela
+document.write("<h2>Cálculo de Soma de Idades</h2>");
+document.write("<p>Você informou a idade de <b>20 pessoas</b>.</p>");
+document.write("<hr>");
+document.write("<p style='font-size: 1.2em;'>A soma total das idades é: <span style='color: darkblue;'><b>" + somaIdades + " anos</b></span></p>");
+    </script>
+</body>
+</html>
